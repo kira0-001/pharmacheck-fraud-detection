@@ -2,16 +2,13 @@
 [server]
 maxUploadSize        = 15
 headless             = true
-enableCORS           = true
-enableXsrfProtection = true
-# Suppress CORS warning messages in the terminal
-allowedHosts         = ["localhost", "127.0.0.1"]
+enableCORS           = false
+enableXsrfProtection = false
 
 [browser]
 gatherUsageStats = false
 
 [runner]
-# Suppress the "use_container_width" deprecation warnings
 magicEnabled = false
 
 [logger]
