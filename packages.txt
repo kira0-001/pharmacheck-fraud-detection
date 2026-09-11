@@ -1,9 +1,7 @@
-# packages.txt — System-level dependencies for Streamlit Community Cloud
-# These are installed via apt-get before Python packages.
 tesseract-ocr
 tesseract-ocr-eng
 tesseract-ocr-spa
 tesseract-ocr-fra
 tesseract-ocr-deu
-libgl1-mesa-glx
+libgl1
 libglib2.0-0
