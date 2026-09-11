@@ -3,11 +3,17 @@
 #  Entry point: streamlit run main_app_code\pages\main.py
 # ─────────────────────────────────────────────────────────────────────────────
 import streamlit as st
+import pandas as pd
+import time
+import base64
 import cv2
 import numpy as np
+import sys
+import os
 from PIL import Image
-import pandas as pd
-import sys, os, base64
+
+# Add the main_app_code directory to sys.path so ner_app can be imported
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 # ── Path Setup ───────────────────────────────────────────────────────────────
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -48,17 +54,12 @@ html, body, [class*="css"], .stMarkdown, .stText  {
     font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
 }
 
-/* ── Permanently kill the Streamlit toolbar/header (running man lives here) ── */
-header, .stAppHeader, .stToolbar,
-[data-testid="stHeader"],
-[data-testid="stToolbar"],
-[data-testid="stDecoration"],
-[data-testid="stStatusWidget"] { 
-    display: none !important; 
-    visibility: hidden !important;
-    height: 0 !important;
-    min-height: 0 !important;
-}
+/* ── Hide Streamlit chrome safely ── */
+header { visibility: hidden !important; }
+[data-testid="stHeader"] { visibility: hidden !important; }
+[data-testid="stToolbar"] { visibility: hidden !important; }
+[data-testid="stDecoration"] { display: none !important; }
+[data-testid="stStatusWidget"] { display: none !important; }
 footer { visibility: hidden !important; }
 #MainMenu { visibility: hidden !important; }
 
