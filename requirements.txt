@@ -1,0 +1,26 @@
+# ─────────────────────────────────────────────────────────────────────────────
+#  PharmaCare — Python Requirements  (Lightweight Edition v2.1)
+#  Total install size: ~400MB  (down from ~2GB with PyTorch/EasyOCR)
+# ─────────────────────────────────────────────────────────────────────────────
+
+# ── Web Framework ────────────────────────────────────────────────────────────
+streamlit>=1.28.0
+
+# ── Computer Vision ──────────────────────────────────────────────────────────
+opencv-python-headless>=4.8.0    # headless = no display server needed (cloud-safe)
+Pillow>=9.0
+
+# ── OCR  (Tesseract — CPU-only, no GPU, no PyTorch) ─────────────────────────
+pytesseract>=0.3.10
+
+# ── NLP ──────────────────────────────────────────────────────────────────────
+spacy>=3.5.0
+nltk>=3.8.0
+
+# ── Data & Excel ─────────────────────────────────────────────────────────────
+pandas>=1.5.0
+numpy>=1.24
+openpyxl>=3.0.0                  # needed by pandas to read .xlsx files
+
+# ── PDF Generation ───────────────────────────────────────────────────────────
+fpdf>=1.7.2

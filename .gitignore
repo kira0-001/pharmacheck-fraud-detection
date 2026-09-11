@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+
+# Virtual Environment - DO NOT push this (it's huge!)
+venv/
+env/
+.env
+.venv/
+
+# Streamlit cache
+.streamlit/secrets.toml
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Temp files
+*.log
+*.tmp
+db_summary.json
+check_db.py
+
+# Large model files (optional - comment out if you want to include)
+# main_app_code/model-best/
